@@ -10,7 +10,7 @@ class Pages extends CI_Controller {
 			show_404();
 		}
 
-		$this->load->helper($form);
+		$this->load->helper('form');
 
 		//check login
 		if (user === null)
