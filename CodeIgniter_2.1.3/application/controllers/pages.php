@@ -2,6 +2,10 @@
 
 class Pages extends CI_Controller {
 
+	public function __construct() {
+	        parent::__construct();
+	}	
+	
 	public function view($page = 'home', $user = null)
 	{
 		if ( ! file_exists('application/views/pages/'.$page.'.php'))
