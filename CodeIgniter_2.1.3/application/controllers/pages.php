@@ -13,7 +13,7 @@ class Pages extends CI_Controller {
 		$this->load->helper('form');
 
 		//check login
-		if (user === null)
+		if ($user === null)
 		{
 			$data['title'] = 'Login'; // Capitalize the first letter			
 
