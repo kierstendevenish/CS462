@@ -1,1 +1,2 @@
-This is <?php $username ?>'s homepage.
+This is <?php echo $username ?>'s homepage.
+<br>
