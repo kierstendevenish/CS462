@@ -42,13 +42,13 @@ class Pages extends CI_Controller {
 		if ($data['username'] === 'admin')
 		{
 			$this->load->view('templates/header', $data);
-			$this->load->view('admin_homepage', $data);
+			$this->load->view('pages/admin_homepage', $data);
 			$this->load->view('templates/footer', $data);
 		}
 		else
 		{
 			$this->load->view('templates/header', $data);
-			$this->load->view('homepage', $data);
+			$this->load->view('pages/homepage', $data);
 			$this->load->view('templates/footer', $data);
 		}
 	}
