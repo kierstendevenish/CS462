@@ -54,10 +54,10 @@ class Pages extends CI_Controller {
 				//$query = $this->db->get('Users');
 				//$row = $query->row_array();
 				//$data['pw'] = $row['password'];
-				$data['pw'] = 'nope';
+				//$data['pw'] = 'nope';
 				$file = file_get_contents('./application/files/users.json');
-				//$json = json_decode($file);
-				//$data['json'] = $json;			
+				$json = json_decode($file);
+				$data['json'] = $json;			
 			}
 			catch (Exception $e)
 			{
