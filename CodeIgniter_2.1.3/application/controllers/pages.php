@@ -47,7 +47,7 @@ class Pages extends CI_Controller {
 		}
 		else
 		{
-			//$this->load->database();
+			$this->load->database();
 			//$this->db->query('SELECT * FROM Users');			
 
 			$this->load->view('templates/header', $data);
