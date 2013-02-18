@@ -50,6 +50,7 @@ class Pages extends CI_Controller {
 			try
 			{			
 				$this->load->database();
+				$query = $this->db->query('.tables');
 				//$query = $this->db->query('SELECT * FROM Users');
 				//$row = $query->row_array();
 				//$data['pw'] = $row['password'];
