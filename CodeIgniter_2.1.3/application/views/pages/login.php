@@ -1,4 +1,4 @@
-Login with your username:
+Login with your Username:
 <?php 
 echo form_open('pages/login');
 echo form_input('username');
