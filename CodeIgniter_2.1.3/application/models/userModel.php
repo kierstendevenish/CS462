@@ -2,13 +2,13 @@
 
 class UserModel extends CI_Model {
 	
-	function __construct()
+	public function __construct()
 	{
 		// Call the Model constructor
 		parent::__construct();
 	}
 
-	function checkExists($username = "", $json = "")
+	public function checkExists($username = "", $json = "")
 	{
 		foreach ($json['users'] as $user)
 		{
@@ -21,7 +21,7 @@ class UserModel extends CI_Model {
 		return false;	
 	}
 
-	function addUser($username = "", $password = "", $json = "")
+	public function addUser($username = "", $password = "", $json = "")
 	{
 		if ($username != "" && $username != "")
 		{
@@ -30,7 +30,7 @@ class UserModel extends CI_Model {
 		}
 	}
 
-	function getNewId($json = "")
+	public function getNewId($json = "")
 	{
 		
 	}
