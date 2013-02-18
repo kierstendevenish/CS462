@@ -7,7 +7,7 @@ Json:
 	{
 		foreach ($user as $elem)
 		{
-			echo $elem + '<br>';
+			echo $elem . '<br>';
 		}
 	} 
 ?>
