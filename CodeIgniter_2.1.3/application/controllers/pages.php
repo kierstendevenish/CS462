@@ -19,7 +19,7 @@ class Pages extends CI_Controller {
 		//check login
 		if ($user === null)
 		{
-			$data['title'] = 'Login'; // Capitalize the first letter			
+			$data['title'] = 'Login';			
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('pages/login', $data);
@@ -65,8 +65,8 @@ class Pages extends CI_Controller {
 				show_error("could not load database: " + $e);
 			}
 
-			$this->load->model('UserModel');
-			if ($this->UserModel->checkExists($data['username'], $json))
+			$this->load->model('userModel');
+			if ($this->userModel->checkExists($data['username'], $json))
 			{			
 				$this->load->view('templates/header', $data);
 				$this->load->view('pages/homepage', $data);
