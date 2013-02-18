@@ -65,9 +65,19 @@ class Pages extends CI_Controller {
 				show_error("could not load database: " + $e);
 			}
 
-			$this->load->view('templates/header', $data);
-			$this->load->view('pages/homepage', $data);
-			$this->load->view('templates/footer', $data);
+			$this->load->model('userModel');
+			if ($this->userModel->checkExists($data['username'], $json))
+			{			
+				$this->load->view('templates/header', $data);
+				$this->load->view('pages/homepage', $data);
+				$this->load->view('templates/footer', $data);
+			}
+			else
+			{
+				$this->load->view('templates/header', $data);
+				$this->load->view('pages/register', $data);
+				$this->load->view('templates/footer', $data);
+			}
 		}
 	}
 
