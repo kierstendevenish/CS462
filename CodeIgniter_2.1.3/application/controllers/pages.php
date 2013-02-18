@@ -47,8 +47,15 @@ class Pages extends CI_Controller {
 		}
 		else
 		{
-			$this->load->database();
-			//$this->db->query('SELECT * FROM Users');			
+			try
+			{			
+				$this->load->database();
+				//$this->db->query('SELECT * FROM Users');			
+			}
+			catch (Exception $e)
+			{
+				show_error("could not load database: " + $e);
+			}
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('pages/homepage', $data);
