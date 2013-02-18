@@ -1,4 +1,4 @@
-This is <?php echo $username ?>'s homepage.
+This is <?php echo $username; ?>'s homepage.
 <br>
 <a href='pages/account'>My Account</a><br><br>
-Json: <?php echo $json ?>
+Json: <?php echo $json; ?>

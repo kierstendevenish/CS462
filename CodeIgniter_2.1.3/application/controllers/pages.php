@@ -56,7 +56,7 @@ class Pages extends CI_Controller {
 				//$data['pw'] = $row['password'];
 				//$data['pw'] = 'nope';
 				$file = file_get_contents('./application/files/users.json');
-				$json = json_decode($file);
+				$json = json_decode($file, true);
 				$data['json'] = $json;			
 			}
 			catch (Exception $e)
