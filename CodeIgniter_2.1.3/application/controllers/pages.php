@@ -49,8 +49,11 @@ class Pages extends CI_Controller {
 		{
 			try
 			{			
-				$this->load->database();
-				//$this->db->query('SELECT * FROM Users');			
+				//$this->load->database();
+				//$this->db->query('SELECT * FROM Users');
+				$file = file_get_contents('files/users/json');
+				$json = json_decode($file);
+				$data['json'] = $json;			
 			}
 			catch (Exception $e)
 			{
