@@ -58,7 +58,7 @@ class Pages extends CI_Controller {
 				$file = file_get_contents('./application/files/users.json');
 				$json = json_decode($file, true);
 				$data['json'] = $json;
-				var_dump($json);			
+				var_dump($json['users']);			
 			}
 			catch (Exception $e)
 			{
