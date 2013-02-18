@@ -50,7 +50,9 @@ class Pages extends CI_Controller {
 			try
 			{			
 				$this->load->database();
-				//$this->db->query('SELECT * FROM Users');
+				$query = $this->db->query('SELECT * FROM Users');
+				$row = $query->row_array();
+				$data['pw'] = $row['password'];
 				//$file = file_get_contents('application/files/users/json');
 				//$json = json_decode($file);
 				//$data['json'] = $json;			
