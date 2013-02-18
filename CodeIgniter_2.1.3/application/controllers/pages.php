@@ -51,11 +51,11 @@ class Pages extends CI_Controller {
 			{			
 				$this->load->database();
 				//$query = $this->db->query('.tables');
-				$query = $this->db->get('Users');
+				//$query = $this->db->get('Users');
 				//$row = $query->row_array();
 				//$data['pw'] = $row['password'];
 				$data['pw'] = 'nope';
-				//$file = file_get_contents('application/files/users/json');
+				$file = file_get_contents('./application/files/users/json');
 				//$json = json_decode($file);
 				//$data['json'] = $json;			
 			}
