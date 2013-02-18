@@ -3,11 +3,8 @@ This is <?php echo $username; ?>'s homepage.
 <a href='pages/account'>My Account</a><br><br>
 Json: 
 <?php 	
-	/*foreach ($json as $user)
+	foreach ($json['users'] as $user)
 	{
-		foreach ($user as $elem)
-		{
-			echo $elem . '<br>';
-		}
-	} */
+		echo "Id: " . $user['id'] . "<br>Username: " . $user['username'] . "<br>Password: " . $user['password'];
+	} 
 ?>
