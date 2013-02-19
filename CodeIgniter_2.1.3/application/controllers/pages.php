@@ -65,7 +65,7 @@ class Pages extends CI_Controller {
 				show_error("could not load database: " + $e);
 			}
 
-			$this->load->model('userModel');
+			//$this->load->model('userModel');
 			//if ($this->userModel->checkExists($data['username'], $json))
 			$found = false;
 			foreach ($json['users'] as $user)
