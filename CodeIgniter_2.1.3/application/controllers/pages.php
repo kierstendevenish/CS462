@@ -70,7 +70,7 @@ class Pages extends CI_Controller {
 			$found = false;
 			foreach ($json['users'] as $user)
 			{
-				if ($username == $user['username'])
+				if ($data['username'] == $user['username'])
 				{
 					$found = true;
 				}
