@@ -93,8 +93,25 @@ class Pages extends CI_Controller {
 		}
 	}
 
-	public function account() 
+	public function setEsl($userId = 0, $esl = '') 
 	{
-		
+		$file = file_get_contents('./application/files/users.json');
+		$json = json_decode($file, true);		
+
+		foreach ($json['users'] as $user)
+		{
+			if ($userId == $user['id'])
+			{
+				$user['esl'] = $esl;
+				$data['user'] = $user;
+			}
+		}
+
+		$newJson = json_encode($json);
+		file_put_contents('./application/files/users.json', $newJson);
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('pages/homepage', $data);
+		$this->load->view('templates/footer', $data);				
 	}
 }
