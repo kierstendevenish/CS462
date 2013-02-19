@@ -37,9 +37,9 @@ class Pages extends CI_Controller {
 
 	public function login()
 	{
-		$data['username'] = $this->input->post('username');
+		$username = $this->input->post('username');
 		
-		if ($data['username'] === 'admin')
+		if ($username === 'admin')
 		{
 			$this->load->view('templates/header', $data);
 			$this->load->view('pages/admin_homepage', $data);
@@ -70,9 +70,10 @@ class Pages extends CI_Controller {
 			$found = false;
 			foreach ($json['users'] as $user)
 			{
-				if ($data['username'] == $user['username'])
+				if ($username == $user['username'])
 				{
 					$found = true;
+					$data['user'] = $user;
 				}
 			}
 
