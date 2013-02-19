@@ -65,7 +65,7 @@ class Pages extends CI_Controller {
 				show_error("could not load database: " + $e);
 			}
 
-			//$this->load->model('userModel');
+			$this->load->model('userModel');
 			//if ($this->userModel->checkExists($data['username'], $json))
 			$found = false;
 			foreach ($json['users'] as $user)
@@ -91,6 +91,14 @@ class Pages extends CI_Controller {
 				$this->load->view('templates/footer', $data);
 			}
 		}
+	}
+
+	public function esl($userId = 0, $esl = null)
+	{
+		$this->load->helper('form');				
+		$this->load->view('templates/header', $data);
+		$this->load->view('pages/setEsl', $data);
+		$this->load->view('templates/footer', $data);		
 	}
 
 	public function setEsl($userId = 0, $esl = '') 
