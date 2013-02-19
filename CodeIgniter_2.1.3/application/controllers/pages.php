@@ -84,6 +84,7 @@ class Pages extends CI_Controller {
 			}
 			else
 			{
+				$this->load->helper('form');				
 				$this->load->view('templates/header', $data);
 				$this->load->view('pages/register', $data);
 				$this->load->view('templates/footer', $data);
