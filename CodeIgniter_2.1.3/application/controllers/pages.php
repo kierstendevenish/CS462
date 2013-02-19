@@ -49,7 +49,7 @@ class Pages extends CI_Controller {
 		{
 			try
 			{			
-				$this->load->database();
+				//$this->load->database();
 				//$query = $this->db->query('.tables');
 				//$query = $this->db->get('Users');
 				//$row = $query->row_array();
