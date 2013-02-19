@@ -65,8 +65,18 @@ class Pages extends CI_Controller {
 				show_error("could not load database: " + $e);
 			}
 
-			$this->load->model('userModel');
-			if ($this->userModel->checkExists($data['username'], $json))
+			//$this->load->model('userModel');
+			//if ($this->userModel->checkExists($data['username'], $json))
+			$found = false;
+			foreach ($json['users'] as $user)
+			{
+				if ($username == $user['username'])
+				{
+					$found = true;
+				}
+			}
+
+			if ($found)
 			{			
 				$this->load->view('templates/header', $data);
 				$this->load->view('pages/homepage', $data);
