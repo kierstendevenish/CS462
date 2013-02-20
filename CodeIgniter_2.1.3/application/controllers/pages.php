@@ -50,7 +50,8 @@ class Pages extends CI_Controller {
 			try
 			{			
 				//$this->load->database();
-				$query = $this->db->query('.tables');
+				$database = new SQLiteDatabase('./application/db/flowershop', 0666, $error);
+				//$query = $this->db->query('.tables');
 				//$query = $this->db->get('Users');
 				//$row = $query->row_array();
 				//$data['pw'] = $row['password'];
