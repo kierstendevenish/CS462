@@ -51,6 +51,7 @@ class Pages extends CI_Controller {
 			{			
 				//$this->load->database();
 				$db = new PDO('sqlite:./application/db/flowershop');
+				$result = $db->query('Select * FROM Users');
 				//$query = $this->db->query('.tables');
 				//$query = $this->db->get('Users');
 				//$row = $query->row_array();
