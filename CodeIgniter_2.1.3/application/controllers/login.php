@@ -1,26 +1,21 @@
-<?php
+
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-	
-	public function __construct() {
-		parent::__construct();
-	}	
 
-	public function login()
+	function __construct()
+ 	{
+		parent::__construct();
+ 	}
+
+	function index()
 	{
-		$data['username'] = $this->input->post('username');
-		
-		if ($data['username'] === 'admin')
-		{
-			$this->load->view('templates/header', $data);
-			$this->load->view('pages/admin_homepage', $data);
-			$this->load->view('templates/footer', $data);
-		}
-		else
-		{
-			$this->load->view('templates/header', $data);
-			$this->load->view('pages/homepage', $data);
-			$this->load->view('templates/footer', $data);
-		}
+		$this->load->helper(array('form'));
+		$this->load->view('login_view');
 	}
+
 }
+
+?>
+
+
