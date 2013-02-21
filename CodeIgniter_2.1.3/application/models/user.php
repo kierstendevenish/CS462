@@ -9,7 +9,7 @@ Class User extends CI_Model
 		$result = $db->query("SELECT * FROM Users WHERE username='" . $username . "' AND password='" . $password . "' LIMIT 1;");
 
 
-		if($result -> num_rows() == 1)
+		if(count($result) == 1)
 		{
 		     return $result;
 		}
