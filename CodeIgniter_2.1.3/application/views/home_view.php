@@ -6,9 +6,9 @@
  </head>
  <body>
    <h1>Home</h1>
-   <h2>Welcome <?php echo $username; ?>!</h2><br><br>
-   ESL: <?php $esl ?><br><a href="">Edit</a>
-   <a href="home/logout">Logout</a>
+   <h2>Welcome <?php echo $username; ?>!</h2>
+   ESL: <?php $esl ?><br><a href="">Edit</a><br><br>
+   <br><a href="home/logout">Logout</a>
  </body>
 </html>
 
