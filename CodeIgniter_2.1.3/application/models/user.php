@@ -31,5 +31,11 @@ Class User extends CI_Model
                 
                 return '';
         }
+        
+        function setEsl($username, $esl)
+        {
+                $db = new PDO('sqlite:./application/db/flowershop');
+                $result = $db->query("UPDATE Users SET esl='" . $esl . "' WHERE username='" . $username . "';");
+        }
 }
 ?>

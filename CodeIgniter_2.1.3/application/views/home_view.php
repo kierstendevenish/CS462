@@ -7,7 +7,7 @@
  <body>
    <h1>Home</h1>
    <h2>Welcome <?php echo $username; ?>!</h2>
-   ESL: <?php $esl ?><br><a href="">Edit</a><br><br>
+   ESL: <?php echo $esl ?><br><a href="home/esl">Edit</a><br><br>
    <br><a href="home/logout">Logout</a>
  </body>
 </html>
