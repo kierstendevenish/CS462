@@ -26,7 +26,7 @@ Class User extends CI_Model
                 
                 if(count($result) == 1)
                 {
-                    return $result[0]['esl'];
+                    return $result['esl'];
                 }
                 
                 return '';
