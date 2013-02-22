@@ -15,6 +15,6 @@
      <br/>
      <input type="submit" value="Login"/>
     </form><br/><br/>
-            <a href=""></a>
+            <a href="register">Register</a>
  </body>
 </html>
