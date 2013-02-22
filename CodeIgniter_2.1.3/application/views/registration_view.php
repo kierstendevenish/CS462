@@ -19,8 +19,7 @@
      <label for="esl">ESL (you can set this later if not known):</label>
      <input type="text" size="200" id="esl" name="esl"/>
      <br/>
-     <input type="submit" value="Login"/>
+     <input type="submit" value="Register"/>
     </form><br><br>
-            <a href=""></a>
  </body>
 </html>
