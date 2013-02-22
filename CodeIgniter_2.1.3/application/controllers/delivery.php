@@ -36,7 +36,10 @@ class Delivery extends CI_Controller {
             foreach ($esls as $e)
             {
                 //make post request
-                $this->curl->simple_get('http://www.google.com');
+                $this->curl->post($e, array('shopAddr' => $shopAddr, 
+                                            'pickupTime' => $pickupTime,
+                                            'deliveryAddr' => $deliveryAddr,
+                                            'deliveryTime' => $deliveryTime), array(CURLOPT_BUFFERSIZE => 10));
             }
             
             //redirect to list of requests
