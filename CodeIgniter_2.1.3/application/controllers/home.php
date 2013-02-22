@@ -39,7 +39,19 @@ class Home extends CI_Controller {
      $session_data = $this->session->userdata('logged_in');
      $username = $session_data['username'];
      $this->load->model('user');
-     $data['esl'] = $this->user->getEsl($username);
+
+     $result= $this->user->getEsl($username);
+     if ($result)
+     {
+         foreach ($result as $row)
+         {
+             $data['esl'] = $row['esl'];
+         }
+     }
+     else
+     {
+         $data['esl'] = '';
+     }
      
      $this->load->view('templates/header');
      $this->load->view('esl', $data);

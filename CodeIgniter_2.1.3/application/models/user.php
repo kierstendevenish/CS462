@@ -29,7 +29,7 @@ Class User extends CI_Model
                     return $result;
                 }
                 
-                return '';
+                return false;
         }
         
         function setEsl($username, $esl)
