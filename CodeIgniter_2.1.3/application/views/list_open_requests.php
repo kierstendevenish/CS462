@@ -11,9 +11,11 @@
            <th>Delivery Time</th>
            <th>Delivery Address</th>
        </tr>
-   <?php foreach ($requests as $req):
+   <?php if (count($requests) > 0):
+        foreach ($requests as $req):
             echo "<tr><td>" . $req['pickupTime'] . "</td><td>" . $req['deliveryTime'] . "</td><td>" . $req['deliveryAddr'] . "</td></tr>";
-   endforeach; ?>
+        endforeach;
+   endif; ?>
    </table>
  </body>
 </html>
