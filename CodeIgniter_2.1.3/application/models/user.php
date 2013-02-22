@@ -49,5 +49,13 @@ Class User extends CI_Model
                 $db = new PDO('sqlite:./application/db/flowershop');
                 $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $esl . "');");
         }
+        
+        function getALlEsls()
+        {
+                $db = new PDO('sqlite:./application/db/flowershop');
+                $result = $db->query("SELECT esl FROM Users;");
+                
+                return $result;
+        }
 }
 ?>

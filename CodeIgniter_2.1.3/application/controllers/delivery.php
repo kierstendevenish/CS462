@@ -31,8 +31,13 @@ class Delivery extends CI_Controller {
             $this->request->create($shopAddr, $pickupTime, $deliveryAddr, $deliveryTime);
             
             //get list of esl's
-            //for each esl
+            $this->load->model('user');
+            $esls = $this->user->getAllEsls();
+            foreach ($esls as $e)
+            {
                 //make post request
+                $this->curl->simple_get('http://www.google.com');
+            }
             
             //redirect to list of requests
             redirect('home');
