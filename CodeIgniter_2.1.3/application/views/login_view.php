@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
-   <title>Flower Shop Login</title>
+   <title>Flower Shop - Login</title>
  </head>
  <body>
    <h1>Login to your account:</h1>
@@ -14,6 +14,7 @@
      <input type="password" size="20" id="passowrd" name="password"/>
      <br/>
      <input type="submit" value="Login"/>
-   </form>
+    </form><br/><br/>
+            <a href=""></a>
  </body>
 </html>
