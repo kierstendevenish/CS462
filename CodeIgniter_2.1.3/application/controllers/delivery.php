@@ -42,7 +42,7 @@ class Delivery extends CI_Controller {
         {
             $this->load->model('request');
             $data['requests'] = $this->request->allOpen();
-            var_dump($requests);
+            var_dump($data['requests']);
             
             $this->load->view('templates/header');
             $this->load->view('list_open_requests', $data);
