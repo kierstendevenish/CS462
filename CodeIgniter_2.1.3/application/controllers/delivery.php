@@ -39,7 +39,7 @@ class Delivery extends CI_Controller {
                 $this->curl->post($e, array('shopAddr' => $shopAddr, 
                                             'pickupTime' => $pickupTime,
                                             'deliveryAddr' => $deliveryAddr,
-                                            'deliveryTime' => $deliveryTime), array(CURLOPT_BUFFERSIZE => 10));
+                                            'deliveryTime' => $deliveryTime));
             }
             
             //redirect to list of requests
