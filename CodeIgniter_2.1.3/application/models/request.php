@@ -11,7 +11,7 @@ Class Request extends CI_Model
         function allOpen()
         {
                 $db = new PDO('sqlite:./application/db/flowershop');
-                $result = $db->query("SELECT * FROM Requests WHERE delivered=false;");
+                $result = $db->query("SELECT * FROM Requests WHERE delivered=0;");
         }
 }
 ?>
