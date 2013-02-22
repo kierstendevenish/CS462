@@ -26,10 +26,15 @@ Class User extends CI_Model
                 
                 if(count($result) == 1)
                 {
-                    return $result;
+                    foreach ($result as $row)
+                    {
+                        $esl = $row['esl'];
+                    }
+                    
+                    return $esl;
                 }
                 
-                return false;
+                return '';
         }
         
         function setEsl($username, $esl)
