@@ -37,6 +37,16 @@ class Delivery extends CI_Controller {
             //redirect to list of requests
             redirect('home');
         }
+        
+        function listOpen()
+        {
+            $this->load->model('request');
+            $data['requests'] = $this->request->allOpen();
+            
+            $this->load->view('templates/header');
+            $this->load->view('list_open_requests');
+            $this->load->view('templates/footer');
+        }
 }
 
 ?>
