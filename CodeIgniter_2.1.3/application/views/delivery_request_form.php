@@ -11,7 +11,7 @@
      <input type="text" size="20" id="shopAddr" name="shopAddr"/>
      <br/>
      <label for="password">Pickup Time:</label>
-     <input type="password" size="10" id="pickupTime" name="pickupTime"/>
+     <input type="text" size="10" id="pickupTime" name="pickupTime"/>
      <br/>
      <label for="phone">Delivery Address:</label>
      <input type="text" size="100" id="deliveryAddr" name="deliveryAddr"/>
