@@ -53,7 +53,7 @@ class Home extends CI_Controller {
      $this->load->model('user');
      
      $esl = $this->input->post('esl');
-     var_dump($esl);
+     var_dump($username);
      $this->user->setEsl($username, $esl);
      
      redirect('home');
