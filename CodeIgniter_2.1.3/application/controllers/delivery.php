@@ -38,7 +38,7 @@ class Delivery extends CI_Controller {
             redirect('home');
         }
         
-        function listOpen()
+        function viewall()
         {
             $this->load->model('request');
             $data['requests'] = $this->request->allOpen();
