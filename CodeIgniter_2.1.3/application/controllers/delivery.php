@@ -18,6 +18,25 @@ class Delivery extends CI_Controller {
 		$this->load->view('delivery_request_form');
                 $this->load->view('templates/footer');
         }
+        
+        function sendRequest()
+        {
+            //get post data
+            $shopAddr = $this->input->post('shopAddr');
+            $pickupTime = $this->input->post('pickupTime');
+            $deliveryAddr = $this->input->post('deliveryAddr');
+            $deliveryTime = $this->input->post('deliveryTime');
+            //save request to db
+            $this->load->model('request');
+            $this->request->create($shopAddr, $pickupTime, $deliveryAddr, $deliveryTime);
+            
+            //get list of esl's
+            //for each esl
+                //make post request
+            
+            //redirect to list of requests
+            redirect('home');
+        }
 }
 
 ?>

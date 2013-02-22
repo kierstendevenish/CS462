@@ -6,7 +6,8 @@
  <body>
    <h1>Home</h1>
    <h2>Welcome <?php echo $username; ?>!</h2>
-   <a href="delivery/request">Submit a Delivery Request</a><br><br>
-   <br><a href="home/logout">Logout</a>
+   <a href="delivery/request">Submit a Delivery Request</a><br/><br/>
+   <a href="delivery/viewall">View Requests</a><br/><br/>
+   <br/><a href="home/logout">Logout</a>
  </body>
 </html>
