@@ -16,9 +16,18 @@ class Home extends CI_Controller {
      $this->load->model('user');
      $data['esl'] = $this->user->getEsl($data['username']);
      
-     $this->load->view('templates/header');
-     $this->load->view('home_view', $data);
-     $this->load->view('templates/footer');
+     if ($data['username'] === "admin")
+     {
+        $this->load->view('templates/header');
+        $this->load->view('admin_home_view', $data);
+        $this->load->view('templates/footer');
+     }
+     else
+     {
+        $this->load->view('templates/header');
+        $this->load->view('home_view', $data);
+        $this->load->view('templates/footer');
+     }
    }
    else
    {
