@@ -15,7 +15,7 @@ class Home extends CI_Controller {
      $data['username'] = $session_data['username'];
      $this->load->model('user');
      $data['esl'] = $this->user->getEsl($data['username']);
-     var_dump('hello');
+     
      $this->load->view('templates/header');
      $this->load->view('home_view', $data);
      $this->load->view('templates/footer');
@@ -53,7 +53,7 @@ class Home extends CI_Controller {
      $this->load->model('user');
      
      $esl = $this->input->post('esl');
-     
+     var_dump($esl);
      $this->user->setEsl($username, $esl);
      
      redirect('home');
