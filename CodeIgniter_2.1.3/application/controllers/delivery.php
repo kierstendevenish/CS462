@@ -45,12 +45,13 @@ class Delivery extends CI_Controller {
                 curl_setopt($ch, CURLOPT_URL, $e['esl']);
                 curl_setopt($ch, CURLOPT_POST, 4);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_str);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, site_url().'home');
                 curl_exec($ch);
                 curl_close($ch);
             }
             
             //redirect to list of requests
-            redirect('home');
+            //redirect('home');
         }
         
         function viewall()
