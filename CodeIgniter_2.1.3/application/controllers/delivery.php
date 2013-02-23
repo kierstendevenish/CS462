@@ -42,7 +42,11 @@ class Delivery extends CI_Controller {
                                             'deliveryTime' => $deliveryTime));*/
                 $fields_str = 'shopAddr='.$shopAddr.'&pickupTime='.$pickupTime.'&deliveryAddr='.$deliveryAddr.'&deliveryTime='.$deliveryTime;
                 $ch = curl_init();
-                
+                curl_setopt($ch, CURLOPT_URL, $e);
+                curl_setopt($ch, CURLOPT_POST, 4);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_str);
+                $result = curl_exec($ch);
+                curl_close($ch);
             }
             
             //redirect to list of requests
