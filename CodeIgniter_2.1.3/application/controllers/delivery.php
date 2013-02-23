@@ -52,8 +52,8 @@ class Delivery extends CI_Controller {
             
             //redirect to list of requests
             //redirect('home');
-            header("Location: ".site_url().'home');
-            exit;
+            //header("Location: ".site_url().'home');
+            //exit;
         }
         
         function viewall()
