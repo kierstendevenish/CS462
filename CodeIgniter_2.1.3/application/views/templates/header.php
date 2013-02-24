@@ -11,4 +11,5 @@
         </ul>
     </div>
     <div id="body">
+        <title>Flower Shop</title>
 	<h1>Flower Shop</h1>
