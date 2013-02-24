@@ -357,6 +357,8 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+$config['css'] = '/application/css/style.css';
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
