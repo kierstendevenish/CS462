@@ -38,9 +38,11 @@ ul{
 	background:url(images/header_bg.gif) no-repeat right top #F7F7F7; color:#171717;}
 #body img.logo{
 	border:none; margin:30px 0 0 0;}
-#body h1{
+/*#body h1{
 	background:url(images/punch_line.gif) no-repeat 0 0 #F7F7F7; color:#171717;
-	width:142px; height:49px; text-indent:-20000px;}
+	width:142px; height:49px; text-indent:-20000px;}*/
+#body h1{
+	color:#171717; width:142px; height:49px; text-indent:-20000px;}
 #body div.bodyText{
 	padding:50px 0 0 0;}
 #body div.bodyText h2{
