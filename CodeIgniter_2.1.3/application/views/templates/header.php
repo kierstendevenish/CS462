@@ -7,9 +7,9 @@
 <body>
     <div id="topNav">
         <ul>
-            <li><a href="index.html" title="Home" class="hover">home</a></li>
+            <li><a href="home/index" title="Home" class="hover">home</a></li>
         </ul>
     </div>
     <div id="body">
         <title>Flower Shop</title>
-	<h1>Flower Shop</h1><br>
+        <br><h1>Flower Shop</h1><br>
