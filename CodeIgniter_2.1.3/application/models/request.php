@@ -15,6 +15,13 @@ Class Request extends CI_Model
                 return $result;
         }
 
+        function getShopName()
+        {
+            $db = new PDO('sqlite:./application/db/flowershop');
+            $result = $db->query("SELECT dataValue FROM appDataString WHERE dataKey='shopName';");
+            return $result;
+        }
+
         function getShopCoordinates()
         {
             $db = new PDO('sqlite:./application/db/flowershop');
