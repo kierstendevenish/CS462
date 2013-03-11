@@ -31,6 +31,7 @@ class Delivery extends CI_Controller {
             $shopName = $this->request->getShopName();
             $coords = $this->request->getShopCoordinates();
             $shopCoords = $coords['lat'] . "," . $coords['long'];
+            $shopEsl = $this->request->getShopEsl();
 
             //save request to db
             $this->request->create($pickupTime, $deliveryAddr, $deliveryTime);
@@ -41,7 +42,7 @@ class Delivery extends CI_Controller {
             foreach ($esls as $e)
             {
                 //make post request
-                $fields_str = '_name=delivery_ready&_domain=rfq&shopName='.$shopName.'&shopCoords='.$shopCoords.'&pickupTime='.$pickupTime.'&deliveryAddr='.$deliveryAddr.'&deliveryTime='.$deliveryTime;
+                $fields_str = '_name=delivery_ready&_domain=rfq&shopName='.$shopName.'&shopCoords='.$shopCoords.'&pickupTime='.$pickupTime.'&deliveryAddr='.$deliveryAddr.'&deliveryTime='.$deliveryTime.'&shopEsl='.$shopEsl;
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, $e['esl']);
                 curl_setopt($ch, CURLOPT_POST, 6);

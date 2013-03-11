@@ -34,5 +34,13 @@ Class Request extends CI_Model
             $returnable['long'] = $row['dataValue'];
             return $returnable;
         }
+
+        function getShopEsl()
+        {
+            $db = new PDO('sqlite:./application/db/flowershop');
+            $result = $db->query("SELECT dataValue FROM appDataString WHERE dataKey='shopEsl';");
+            $row = $result->fetch();
+            return $row['dataValue'];
+        }
 }
 ?>
