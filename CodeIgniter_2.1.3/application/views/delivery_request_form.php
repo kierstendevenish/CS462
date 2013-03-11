@@ -7,9 +7,6 @@
    <h1>Create a delivery request:</h1>
    <?php echo validation_errors(); ?>
    <?php echo form_open('delivery/sendRequest'); ?>
-     <label for="username">Flowershop Address:</label>
-     <input type="text" size="20" id="shopAddr" name="shopAddr"/>
-     <br/>
      <label for="password">Pickup Time:</label>
      <input type="text" size="10" id="pickupTime" name="pickupTime"/>
      <br/>
