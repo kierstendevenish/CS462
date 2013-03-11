@@ -29,7 +29,7 @@ class Delivery extends CI_Controller {
             //get persistent data
             $this->load->model('request');
             $shopName = $this->request->getShopName();
-            $coords = $this->request->getCoordinates();
+            $coords = $this->request->getShopCoordinates();
             $shopCoords = $coords['lat'] . "," . $coords['long'];
 
             //save request to db
