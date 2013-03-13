@@ -51,7 +51,7 @@ Class Request extends CI_Model
             $accepted = 0;
 
             $db = new PDO('sqlite:./application/db/flowershop');
-            $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$estDeliveryTime."','".rate."','".$accepted."');");
+            $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$estDeliveryTime."','".$rate."','".$accepted."');");
         }
 }
 ?>
