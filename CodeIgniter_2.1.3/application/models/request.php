@@ -45,5 +45,13 @@ Class Request extends CI_Model
             $row = $result->fetch();
             return $row['dataValue'];
         }
+
+        function saveBid($deliveryId, $driverName, $estDeliveryTime, $rate)
+        {
+            $accepted = 0;
+
+            $db = new PDO('sqlite:./application/db/flowershop');
+            $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$estDeliveryTime."','".rate."','".$accepted."');");
+        }
 }
 ?>
