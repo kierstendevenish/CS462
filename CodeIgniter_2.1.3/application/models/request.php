@@ -4,8 +4,11 @@ Class Request extends CI_Model
 {
         function create($pickupTime, $deliveryAddr, $deliveryTime)
         {
+                $id = uniqid();
                 $db = new PDO('sqlite:./application/db/flowershop');
-                $result = $db->query("INSERT INTO Requests (pickupTime, deliveryAddr, deliveryTime, delivered) VALUES ('" . $shopAddr . "','" . $pickupTime . "','" . $deliveryAddr . "','" . $deliveryTime . "',0);");
+                $result = $db->query("INSERT INTO Requests (id, pickupTime, deliveryAddr, deliveryTime, delivered) VALUES ('" . $id . "','" . $shopAddr . "','" . $pickupTime . "','" . $deliveryAddr . "','" . $deliveryTime . "',0);");
+
+                return $id;
         }
         
         function allOpen()
