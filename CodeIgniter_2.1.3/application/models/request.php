@@ -49,9 +49,9 @@ Class Request extends CI_Model
         function saveBid($deliveryId, $driverName, $estDeliveryTime, $rate)
         {
             $accepted = 0;
-            var_dump("here");
-            System.DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0);
-            $estDeliveryTime = dtDateTime.AddSeconds($estDeliveryTime).ToLocalTime;
+
+            $this->load->helper('date');
+            $estDeliveryTime = standard_date('DATE_RFC2822', $estDeliveryTime);
             var_dump($estDeliveryTime);
 
             $db = new PDO('sqlite:./application/db/flowershop');
