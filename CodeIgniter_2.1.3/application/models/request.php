@@ -51,7 +51,7 @@ Class Request extends CI_Model
             $accepted = 0;
 
             $this->load->helper('date');
-            $dtime = standard_date('DATE_RFC2822', ($estDeliveryTime*1000));
+            $dtime = mdate("%Y-%m-%d %h:%i:%s", ($estDeliveryTime*1000));
             var_dump($dtime);
 
             $db = new PDO('sqlite:./application/db/flowershop');
