@@ -50,6 +50,10 @@ Class Request extends CI_Model
         {
             $accepted = 0;
 
+            System.DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0);
+            $estDeliveryTime = dtDateTime.AddSeconds($estDeliveryTime).ToLocalTime;
+            var_dump($estDeliveryTime);
+
             $db = new PDO('sqlite:./application/db/flowershop');
             $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$estDeliveryTime."','".$rate."','".$accepted."');");
         }
