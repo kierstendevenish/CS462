@@ -49,7 +49,7 @@ Class Request extends CI_Model
         function saveBid($deliveryId, $driverName, $estDeliveryTime, $rate)
         {
             $accepted = 0;
-
+            var_dump("here");
             System.DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0);
             $estDeliveryTime = dtDateTime.AddSeconds($estDeliveryTime).ToLocalTime;
             var_dump($estDeliveryTime);
