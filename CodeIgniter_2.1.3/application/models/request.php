@@ -6,6 +6,10 @@ Class Request extends CI_Model
         {
                 $id = uniqid();
                 $db = new PDO('sqlite:./application/db/flowershop');
+                var_dump($id);
+                var_dump($pickupTime);
+                var_dump($deliveryAddr);
+                var_dump($deliveryTime);
                 $result = $db->query("INSERT INTO Requests (id, pickupTime, deliveryAddr, deliveryTime, delivered) VALUES ('" . $id . "','" . $pickupTime . "','" . $deliveryAddr . "','" . $deliveryTime . "',0);");
 
                 return $id;
@@ -55,6 +59,12 @@ Class Request extends CI_Model
 
             $db = new PDO('sqlite:./application/db/flowershop');
             $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$dtime."','".$rate."','".$accepted."');");
+        }
+
+        function getBidsForRequest($requestId = '')
+        {
+            $db = new PDO('sqlite:./application/db/flowershop');
+            $result = $db->query("SELECT * FROM Bids WHERE ");
         }
 }
 ?>

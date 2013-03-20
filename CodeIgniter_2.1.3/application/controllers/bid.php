@@ -17,6 +17,11 @@ class Bid extends CI_Controller {
 
             $this->request->saveBid($deliveryId, $driverName, $estDeliveryTime, $rate);
         }
+
+        function list()
+        {
+            $this->load->model('request');
+        }
 }
 
 ?>
