@@ -49,17 +49,13 @@ Class Request extends CI_Model
         function saveBid($deliveryId, $driverName, $estDeliveryTime, $rate)
         {
             $accepted = 0;
-            var_dump("here");
+
             $this->load->helper('date');
             $dtime = mdate("%Y-%m-%d %h:%i:%s", $estDeliveryTime);
-            var_dump($deliveryId);
-            var_dump($driverName);
-            var_dump($dtime);
-            var_dump($rate);
-            var_dump($accepted);
 
             $db = new PDO('sqlite:./application/db/flowershop');
             $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$dtime."','".$rate."','".$accepted."');");
+            var_dump($result);
         }
 
         function getBidsForRequest($requestId = '')
