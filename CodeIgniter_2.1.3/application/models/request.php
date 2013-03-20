@@ -52,6 +52,11 @@ Class Request extends CI_Model
             var_dump("here");
             $this->load->helper('date');
             $dtime = mdate("%Y-%m-%d %h:%i:%s", $estDeliveryTime);
+            var_dump($deliveryId);
+            var_dump($driverName);
+            var_dump($dtime);
+            var_dump($rate);
+            var_dump($accepted);
 
             $db = new PDO('sqlite:./application/db/flowershop');
             $result = $db->query("INSERT INTO Bids VALUES ('".$deliveryId."','".$driverName."','".$dtime."','".$rate."','".$accepted."');");
