@@ -49,7 +49,7 @@ Class Request extends CI_Model
         function saveBid($deliveryId, $driverName, $estDeliveryTime, $rate)
         {
             $accepted = 0;
-
+            var_dump("here");
             $this->load->helper('date');
             $dtime = mdate("%Y-%m-%d %h:%i:%s", $estDeliveryTime);
 
