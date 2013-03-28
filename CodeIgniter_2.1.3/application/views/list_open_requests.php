@@ -4,16 +4,17 @@
    <title>Flower Shop - Open Requests</title>
  </head>
  <body>
-   <h1>Open delivery requests:</h1>
-   <table>
+   <h1>Open delivery requests:</h1><br>
+   <table rules='all'>
        <tr>
            <th>Pickup Time</th>
            <th>Delivery Time</th>
            <th>Delivery Address</th>
+           <th>Bids</th>
        </tr>
    <?php if (count($requests) > 0):
         foreach ($requests as $req):
-            echo "<tr><td>" . $req['pickupTime'] . "</td><td>" . $req['deliveryTime'] . "</td><td>" . $req['deliveryAddr'] . "</td></tr>";
+            echo "<tr><td>" . $req['pickupTime'] . "</td><td>" . $req['deliveryTime'] . "</td><td>" . $req['deliveryAddr'] . "</td><td><a href=''>Bids</a></td></tr>";
         endforeach;
    endif; ?>
    </table>
