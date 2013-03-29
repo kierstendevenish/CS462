@@ -70,7 +70,7 @@ class Delivery extends CI_Controller {
             $data['requestId'] = $requestId;
 
             $this->load->view('templates/header');
-            $this->load->view('list_open_requests', $data);
+            $this->load->view('view_bids', $data);
             $this->load->view('templates/footer');
         }
 }
