@@ -62,7 +62,8 @@ Class Request extends CI_Model
         function getBidsForRequest($requestId = '')
         {
             $db = new PDO('sqlite:./application/db/flowershop');
-            $result = $db->query("SELECT * FROM Bids WHERE ");
+            $result = $db->query("SELECT * FROM Bids WHERE deliveryId='" . $requestId . "';");
+            return $result;
         }
 }
 ?>
