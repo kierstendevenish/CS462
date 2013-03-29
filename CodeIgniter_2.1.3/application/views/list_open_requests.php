@@ -10,11 +10,12 @@
            <th>Pickup Time</th>
            <th>Delivery Time</th>
            <th>Delivery Address</th>
+           <th>Driver</th>
            <th>Bids</th>
        </tr>
    <?php if (count($requests) > 0):
         foreach ($requests as $req):
-            echo "<tr><td>" . $req['pickupTime'] . "</td><td>" . $req['deliveryTime'] . "</td><td>" . $req['deliveryAddr'] . "</td><td><a href=''>Bids</a></td></tr>";
+            echo "<tr><td>" . $req['pickupTime'] . "</td><td>" . $req['deliveryTime'] . "</td><td>" . $req['deliveryAddr'] . "</td><td>".$req['driverId']."</td><td><a href='bid/view/'".$req['id'].">Bids</a></td></tr>";
         endforeach;
    endif; ?>
    </table>
