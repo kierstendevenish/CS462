@@ -62,6 +62,17 @@ class Delivery extends CI_Controller {
             $this->load->view('list_open_requests', $data);
             $this->load->view('templates/footer');
         }
+
+        function viewBids($requestId = '')
+        {
+            $this->load->model('request');
+            $data['bids'] = $this->request->getBidsForRequest($requestId);
+            $data['requestId'] = $requestId;
+
+            $this->load->view('templates/header');
+            $this->load->view('list_open_requests', $data);
+            $this->load->view('templates/footer');
+        }
 }
 
 ?>
