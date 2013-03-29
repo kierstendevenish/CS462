@@ -5,7 +5,7 @@
  </head>
  <body>
    <h1>Open delivery requests:</h1><br>
-   <table rules='all'>
+   <table border='1' rules='all'>
        <tr>
            <th>Pickup Time</th>
            <th>Delivery Time</th>
