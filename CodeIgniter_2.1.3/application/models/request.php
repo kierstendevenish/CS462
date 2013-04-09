@@ -53,7 +53,7 @@ Class Request extends CI_Model
             $this->load->helper('date');
             $dtime = mdate("%Y-%m-%d %h:%i:%s", $estDeliveryTime);
 
-            $db = new PDO('sqlite:./application/db/fsBids');
+            $db = new PDO('sqlite:./application/db/flowershop');
             $query = "INSERT INTO Bids (deliveryId, driverName, estimatedDeliveryTime, rate, accepted) VALUES ('".$deliveryId."','".$driverName."','".$dtime."',".$rate.",".$accepted.");";
             var_dump($query);
             $result = $db->query($query);
@@ -62,7 +62,7 @@ Class Request extends CI_Model
 
         function getBidsForRequest($requestId = '')
         {
-            $db = new PDO('sqlite:./application/db/fsBids');
+            $db = new PDO('sqlite:./application/db/flowershop');
             $result = $db->query("SELECT * FROM Bids WHERE deliveryId='" . $requestId . "';");
             return $result;
         }

@@ -54,6 +54,18 @@ Class User extends CI_Model
         {
                 $db = new PDO('sqlite:./application/db/flowershop');
                 $result = $db->query("SELECT esl FROM Users;");
+
+                if(count($result) >= 1)
+                {
+                    $data = array();
+
+                    foreach ($result as $row)
+                    {
+                        array_push($data, $row['esl']);
+                    }
+
+                    return $data;
+                }
                 
                 return $result;
         }
