@@ -44,7 +44,7 @@ class Delivery extends CI_Controller {
                 //make post request
                 $fields_str = '_name=delivery_ready&_domain=rfq&id='.$id.'&shopName='.$shopName.'&shopCoords='.$shopCoords.'&pickupTime='.$pickupTime.'&deliveryAddr='.$deliveryAddr.'&deliveryTime='.$deliveryTime.'&shopEsl='.$shopEsl;
                 $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $e['esl']);
+                curl_setopt($ch, CURLOPT_URL, $e);
                 curl_setopt($ch, CURLOPT_POST, 6);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_str);
                 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
